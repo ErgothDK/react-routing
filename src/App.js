@@ -1,25 +1,31 @@
 import {
-  Route,
+  //Route,
   RouterProvider,
   createBrowserRouter,
-  createRoutesFromElements,
+  //createRoutesFromElements,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
+import Layout from "./pages/Layout";
 
-/* const router = createBrowserRouter([
-  { path: "/", element: <Home /> },
-  { path: "/products", element: <Products /> },
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/products", element: <Products /> },
+    ],
+  },
 ]);
- */
 
-const routeDefinitions = createRoutesFromElements(
+/* const routeDefinitions = createRoutesFromElements(
   <Route>
     <Route path="/" element={<Home />} />
     <Route path="/products" element={<Products />} />
   </Route>
 );
-const router = createBrowserRouter(routeDefinitions);
+const router = createBrowserRouter(routeDefinitions); */
 
 function App() {
   return <RouterProvider router={router} />;

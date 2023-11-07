@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -9,6 +10,9 @@ const Products = () => {
         <li>Second product</li>
         <li>Third product</li>
       </ul>
+      <p>
+        Go back to <Link to="/">Home Page</Link>
+      </p>
     </div>
   );
 };
