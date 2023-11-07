@@ -1,16 +1,19 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import MainNavigation from "../components/MainNavigation";
-import { Outlet } from "react-router";
 
-const Layout = () => {
+const Error = () => {
   return (
     <Fragment>
       <MainNavigation />
       <main>
-        <Outlet />
+        <h1>404 - Page not found</h1>
+        <p>
+          go back to <Link to="/">Home</Link>
+        </p>
       </main>
     </Fragment>
   );
 };
 
-export default Layout;
+export default Error;
