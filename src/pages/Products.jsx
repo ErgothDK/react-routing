@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -7,13 +7,13 @@ const Products = () => {
       <h1>Products List</h1>
       <ul>
         <li>
-          <NavLink to="/product/1">First product</NavLink>
+          <Link to="/product/1">First product</Link>
         </li>
         <li>
-          <NavLink to="/product/2">Second product</NavLink>
+          <Link to="/product/2">Second product</Link>
         </li>
         <li>
-          <NavLink to="/product/3">Third product</NavLink>
+          <Link to="/product/3">Third product</Link>
         </li>
       </ul>
       <p>
