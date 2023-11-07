@@ -8,6 +8,13 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Layout from "./pages/Layout";
 import Error from "./pages/Error";
+import ProductDetail from "./pages/ProductDetail";
+
+const DUMMY_PRODUCT = {
+  id: Math.random(),
+  name: "Soya",
+  detail: "Some basic text for detail porpuses",
+};
 
 const router = createBrowserRouter([
   {
@@ -17,6 +24,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/products", element: <Products /> },
+      {
+        path: "/product/:productId",
+        element: <ProductDetail {...DUMMY_PRODUCT} />,
+      },
     ],
   },
 ]);
